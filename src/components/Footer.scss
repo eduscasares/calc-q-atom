@@ -1,0 +1,36 @@
+@use '../variables';
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+    position: absolute;
+
+    h1, p {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        color: variables.$black;
+    }
+}
+
+#dark { 
+    footer {
+        h1, p {
+            color: variables.$white;
+        }
+    }   
+}
+
+.retro {
+    footer {
+        h1, p {
+            font-size: 9px;
+            padding-top: 7px;
+        }
+    }
+}

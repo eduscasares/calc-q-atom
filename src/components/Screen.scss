@@ -1,0 +1,32 @@
+@use '../variables';
+
+.screen {
+    min-height: 64px;
+    max-width: 100%;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    background-color: variables.$black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 200;
+    line-height: 32px;
+    color: variables.$white;
+    border: 1px solid variables.$black;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#dark {
+    .screen {
+        border-color: variables.$white;
+    }
+}
+
+.retro {
+    .screen {
+        border-radius: 0;
+        background-color: variables.$retroblack;
+    }
+}

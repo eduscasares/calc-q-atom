@@ -1,0 +1,18 @@
+@use '../variables';
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "seven eight nine divide clean"
+        "four five six multiplication clean-all"
+        "one two three substract equals"
+        "zero double-zero decimals sum equals";
+}
+
+#dark {
+    .board {
+        border-color: variables.$white;
+    }
+}

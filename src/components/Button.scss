@@ -1,0 +1,126 @@
+@use '../variables';
+
+button {
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    background-color: variables.$white;
+    border: 1px solid variables.$black;
+    color: variables.$black;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+
+    &:first-child,
+    &:nth-child(2) {
+        background-color: variables.$accent;
+        color: variables.$white;
+    }
+
+    &.equals {
+        height: 100%;
+    }
+
+    &:first-child {
+        grid-area: clean;
+    }
+    &:nth-child(2) {
+        grid-area: clean-all;
+    }
+    &:nth-child(3) {
+        grid-area: divide;
+    }
+    &:nth-child(4) {
+        grid-area: seven;
+    }
+    &:nth-child(5) {
+        grid-area: eight;
+    }
+    &:nth-child(6) {
+        grid-area: nine;
+    }
+    &:nth-child(7) {
+        grid-area: multiplication;
+    }
+    &:nth-child(8) {
+        grid-area: four;
+    }
+    &:nth-child(9) {
+        grid-area: five;
+    }
+    &:nth-child(10) {
+        grid-area: six;
+    }
+    &:nth-child(11) {
+        grid-area: substract;
+    }
+    &:nth-child(12) {
+        grid-area: one;
+    }
+    &:nth-child(13) {
+        grid-area: two;
+    }
+    &:nth-child(14) {
+        grid-area: three;
+    }
+    &:nth-child(15) {
+        grid-area: sum;
+    }
+    &:nth-child(16) {
+        grid-area: zero;
+        border-bottom-left-radius: 6px;
+    }
+    &:nth-child(17) {
+        grid-area: double-zero;
+    }
+    &:nth-child(18) {
+        grid-area: decimals;
+    }
+    &:last-child { // equals
+        grid-area: equals;
+        border-bottom-right-radius: 6px;
+    }
+
+    &:active {
+        border-top: 4px solid variables.$black;
+        border-left: 4px solid variables.$black;
+    }
+}
+
+#dark {
+    button {
+        border-color: variables.$white;
+        color: variables.$white;
+        background-color: variables.$black;
+
+        &:first-child,
+        &:nth-child(2) {
+            background-color: variables.$accent;
+            color: variables.$white;
+        }
+    }
+}
+
+#dark.retro {
+    button {
+        &:first-child,
+        &:nth-child(2) {
+            background-color: variables.$retroaccent;
+        }
+
+        background-color: variables.$retroblack;
+    }
+}
+
+.retro {
+    button {
+        border-radius: 0;
+
+        &:first-child,
+        &:nth-child(2) {
+        background-color: variables.$retroaccent;
+        color: variables.$white !important;
+    }
+    }
+}

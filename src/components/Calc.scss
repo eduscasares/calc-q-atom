@@ -1,0 +1,58 @@
+@use '../variables';
+
+main {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .calculator {
+        width: 100%;
+        max-width: 320px;
+        border: 2px solid variables.$black;
+        border-radius: 8px;
+        position: relative;
+        z-index: 100;
+    }
+}
+
+#light main {
+    background-color: variables.$white;
+}
+
+#dark main {
+    background-color: variables.$black;
+
+    .calculator {
+        border-color: variables.$white;
+    }
+}
+#dark.retro main {
+    background-color: variables.$retroblack;
+}
+
+.retro {
+    &#dark {
+        .calculator {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .calculator {
+        border-radius: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 100%;
+            height: 100%;
+            background-color: variables.$retroblack;
+            z-index: -1;
+        }
+    }
+}
