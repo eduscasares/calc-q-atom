@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/calc-q-atom/static/css/main.b02866a7.css",
+    "main.js": "/calc-q-atom/static/js/main.179c04b2.js",
+    "index.html": "/calc-q-atom/index.html",
+    "main.b02866a7.css.map": "/calc-q-atom/static/css/main.b02866a7.css.map",
+    "main.179c04b2.js.map": "/calc-q-atom/static/js/main.179c04b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b02866a7.css",
+    "static/js/main.179c04b2.js"
+  ]
+}
